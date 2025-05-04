@@ -1,24 +1,16 @@
-let nums = [0,0,0,1,2,2,2,2,3,3,3,3,4];
+function removeDuplicates(nums){
 
-function removeDuplicateNums(arrayNums){
-
-    if(arrayNums.length == 0) return 0;
+    if(nums.length == 0) return 0;
 
     let i = 0;
 
-    for(let j =1; j < arrayNums.length; j++){
-        if(arrayNums[i] != arrayNums[j]){
+    for(let j =1; j < nums.length; j++){
+        if(nums[i] != nums[j]){
             i++;
-            arrayNums[i] = arrayNums[j];
+            nums[i] = nums[j];
         }
     }
 
     return i + 1;
 
 }
-
-let k = removeDuplicateNums(nums);
-
-console.log(`k = ${k}`);
-
-console.log(`Array ordenado: [${nums}]`)
